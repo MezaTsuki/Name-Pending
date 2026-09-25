@@ -1,0 +1,165 @@
+{
+    
+    "bgColor": {
+        "text": "Background Color",
+        "type": "color",
+        "value": "#ffffff"
+    },
+    "gridColor": {
+        "text": "Grid Color",
+        "type": "color",
+        "value": "#314b3e"
+    },
+    "gridPosition": {
+        "text": "Grid Position:",
+        "type": "dropdown",
+        "items": ["Center", "Top","Left", "Right", "Bottom", "Top Left", "Top Right", "Bottom Left", "Bottom Right" ],
+        "value": 0
+    },
+    "gridSize": {
+        "text": "Grid Size:",
+        "type": "slider",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "value": 100
+    },
+    "rows": {
+        "text": "Rows:",
+        "type": "slider",
+        "min": 2,
+        "max": 20,
+        "step": 1,
+        "value": 3
+    },
+    "columns": {
+        "text": "Columns:",
+        "type": "slider",
+        "min": 2,
+        "max": 20,
+        "step": 1,
+        "value": 5
+    },
+    "emptyCells": {
+        "text": "Number of Empty Cells:\n(Must be less than total grid area)",
+        "type": "slider",
+        "min": 1,
+        "max": 50,
+        "step": 1,
+        "value": 1
+    },
+    "borderRadius": {
+        "text": "Border Round:",
+        "type": "slider",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "value": 5
+    },
+    "cellGap": {
+        "text": "Cell Gap:",
+        "type": "slider",
+        "min": 0,
+        "max": 1,
+        "step": 0.05,
+        "value": 0
+    },
+    "colorMode": {
+        "text": "Color Mode:",
+        "type": "dropdown",
+        "items": ["Single", "Gradient", "Random"],
+        "value": 1
+    },
+    "color1": {
+        "text": "Color 1",
+        "type": "color",
+        "value": "#9cecf7"
+    },
+    "color2": {
+        "text": "Color 2",
+        "type": "color",
+        "value": "#F7C347"
+    },
+    "movementCurve": {
+        "text": "Movement Curve:",
+        "type": "dropdown",
+        "items": ["Linear", "Ease-In", "Ease-Out", "Ease-In-Out"],
+        "value": 2
+    },
+    "animation1": {
+        "text": "",
+        "type": "dropdown",
+        "items": ["Impact", "Shockwave", "Extend", "Shrink", "Flash-End", "Flash-Start"],
+        "value": 0
+    },
+    "animationToggle1": {
+        "text": "Animation 1:",
+        "type": "checkbox",
+        "value": false
+    },
+    "animation2": {
+        "text": "",
+        "type": "dropdown",
+        "items": ["Impact", "Shockwave", "Extend", "Shrink", "Flash-End", "Flash-Start"],
+        "value": 0
+    },
+    "animationToggle2": {
+        "text": "Animation 2:",
+        "type": "checkbox",
+        "value": false
+    },
+    "animationIntensity": {
+        "text": "Intensity:",
+        "type": "slider",
+        "min": 0.1,
+        "max": 2.5,
+        "step": 0.1,
+        "value": 1
+    },
+    "animationColor": {
+        "text": "Animation Color:",
+        "type": "color",
+        "value": "#ffffff"
+    },
+    "ticks": {
+        "text": "Number of Ticks:",
+        "type": "slider",
+        "min": 1,
+        "max": 8,
+        "step": 1,
+        "value": 1
+    },
+    "interval": {
+        "text": "Movement Interval (ms):",
+        "type": "slider",
+        "min": 100,
+        "max": 3000,
+        "step": 5,
+        "value": 500
+    },
+    "transitionSpeed": {
+        "text": "Transition Speed (ms):",
+        "type": "slider",
+        "min": 100,
+        "max": 3000,
+        "step": 5,
+        "value": 500
+    },
+    "shuffle": {
+        "type": "button",
+        "value": "SHUFFLE"
+    },
+    "startupShuffle": {
+        "type": "checkbox",
+        "text": "Startup Shuffle",
+        "value": false
+    },
+    "shuffleAmount": {
+        "text": "Shuffle Amount (x Number of Ticks):",
+        "type": "slider",
+        "min": 100,
+        "max": 1000,
+        "step": 100,
+        "value": 200
+    }
+}
