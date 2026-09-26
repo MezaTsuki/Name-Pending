@@ -63,7 +63,7 @@ class Grid {
             () => Array(this.columns).fill(0)
         );
 
-        console.log("grid constructed");
+        // console.log("grid constructed");
     }
 
     //! __ SET / UPDATE
@@ -238,7 +238,7 @@ class Cell {
         document.body.appendChild(this.cell);
 
         this.Parent.addOccupiedSpace(row, column);
-        console.log("cell constructed");
+        // console.log("cell constructed");
     }
     destroy() {
         this.Parent.addEmptySpace(this.row, this.column);
@@ -296,6 +296,13 @@ class Effect {
         this.transitionDuration = parseFloat( globalCSSProperties.getPropertyValue('--transitionSpeed') );
         //! ms
     }
+    destroy() {
+        this.cell = null;
+        this.cellStyle = null;
+        this.animIndex = null;
+        this.dirIndex = null;
+        this.transitionDuration = null;
+    }
     play() {
         switch(animType[this.animIndex]) {
             case 0: this.mutative_end(); break;
@@ -313,10 +320,10 @@ class Effect {
         const dir = ['top', 'right', 'bottom', 'left']
         const name = animName[this.animIndex] + "-" + dir[this.dirIndex];
         const duration = parseFloat(this.cellStyle.transitionDuration) * 1000;
-        console.log(duration);
+        // console.log(duration);
         setTimeout(() => {
             this.cell.style.animation = `${name} ${duration}ms var(--transitionTiming)`;
-            setTimeout(() => { this.cell.style.animation = ""; }, (duration - 10))
+            setTimeout(() => { this.cell.style.animation = ""; this.destroy(); }, (duration - 10))
         }, (duration - 10))
     }
     mutative_start() {
@@ -324,7 +331,7 @@ class Effect {
         const name = animName[this.animIndex] + "-" + dir[this.dirIndex];
         const duration = parseFloat(this.cellStyle.transitionDuration) * 1000;
         this.cell.style.animation = `${name} ${duration}ms var(--transitionTiming)`;
-        setTimeout(() => { this.cell.style.animation = ""; }, (duration - 10))
+        setTimeout(() => { this.cell.style.animation = ""; this.destroy(); }, (duration - 10))
     }
     generative_end() {
    
@@ -348,7 +355,7 @@ class Effect {
 
             document.body.appendChild(container); 
             const effectDuraton = parseFloat(getComputedStyle(effect).animationDuration) * 1000;
-            setTimeout(() => { container.remove() }, effectDuraton - 50);
+            setTimeout(() => { container.remove(); this.destroy(); }, effectDuraton - 20);
             // console.log("PLAY");
 
         }, this.transitionDuration)

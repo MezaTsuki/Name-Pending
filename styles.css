@@ -86,7 +86,7 @@ body{
         border: calc( 16px * var(--effectIntensity) ) var(--effectColor) solid;
     }
     to{
-        border: calc( 1px ) var(--effectColor) solid;
+        border: 0px var(--effectColor) solid;
         transform: scale( calc(1.5 * var(--effectIntensity)) );
     }
 }

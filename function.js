@@ -2,10 +2,10 @@
 
 document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "hidden") {
-        console.log("Lively wallpaper paused");
+        // console.log("Lively wallpaper paused");
         stopLoop();
     } else if (document.visibilityState === "visible") {
-        console.log("Lively wallpaper resumed");
+        // console.log("Lively wallpaper resumed");
         startLoop();
     }
 });
@@ -112,7 +112,7 @@ async function triggerTicks(times) {
     
     await new Promise(r => setTimeout(r, interval));
     document.body.style.setProperty('--transitionSpeed', `${0}`);
-    effectToggle = false;
+    effectToggle1 = false; effectToggle2 = false;
     for(let i=0; i<times; i++) {
         tick(numberOfTicks);
         await new Promise(r => setTimeout(r, 5));
